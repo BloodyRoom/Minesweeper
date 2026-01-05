@@ -1,12 +1,16 @@
 import './App.css'
+import { useTheme } from "./components/providers/ThemeProvider";
 
 function App() {
+    const { theme, toggleTheme } = useTheme();
 
-  return (
-    <>
-        <h1 className={"text-3xl"}>test</h1>
-    </>
-  )
+    return (
+        <>
+            <button onClick={toggleTheme}>
+                {theme === "dark" ? "🌙 Dark" : "☀️ Light"}
+            </button>
+        </>
+    )
 }
 
 export default App

@@ -1,1 +1,23 @@
 @import "tailwindcss";
+
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+
+:root {
+    --bg: #ffffff;
+    --text: #000000;
+}
+
+[data-theme="dark"] {
+    --bg: #0a0a0a;
+    --text: #ffffff;
+}
+
+body, html {
+    width: 100%;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+
+    background-color: var(--bg);
+    color: var(--text);
+}
